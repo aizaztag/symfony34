@@ -1,0 +1,14 @@
+{% extends 'git_base.html.twig' %}
+{% block body %}
+    <div class="col-sm-3">
+
+        {#{% include 'github/profile.html.twig' %}#}
+        {{ render(controller('AppBundle:GitHub:profile' , {'username': username})) }}
+
+    </div>
+
+    <div class="col-sm-9">
+    {% include 'github/repos.html.twig' %}
+    </div>
+
+{% endblock %}
